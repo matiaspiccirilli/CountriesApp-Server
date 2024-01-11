@@ -55,4 +55,16 @@ const getCountryById = async (req, res) => {
     }
 }
 
-module.exports = {getAllCountries, getCountryById}
+const getSomeOfLife = async (req, res) => {
+
+    try {
+        return res.status(200).json({"estado": "OK"})
+    }
+
+    catch(error) {
+        return res.status(500).send(error.message)
+    }
+
+}
+
+module.exports = {getAllCountries, getCountryById, getSomeOfLife}
